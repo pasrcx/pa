@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>乌龟跨境电商 · 招聘海报 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;700&family=Be+Vietnam+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #1a0a0a;
+    font-family: 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+    min-height: 100vh;
+  }
+
+  .poster {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    background: #4e1010;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Hex background */
+  .hex-bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='46'%3E%3Cpolygon points='20,2 38,12 38,34 20,44 2,34 2,12' fill='none' stroke='%23C9A84C' stroke-width='1.2'/%3E%3C/svg%3E");
+    background-size: 40px 46px;
+    pointer-events: none;
+  }
+
+  /* Deco circles */
+  .deco-circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.08);
+    pointer-events: none;
+  }
+
+  /* ── TOP BAR ── */
+  .top-bar {
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(90deg, #8B6914, #C9A84C, #E8CC7A, #C9A84C, #8B6914);
+    position: relative;
+    z-index: 10;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    padding: 28px 22px 20px;
+    position: relative;
+    z-index: 5;
+  }
+
+  .logo-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .turtle-icon { width: 40px; height: 40px; flex-shrink: 0; }
+
+  .company-zh {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 13px;
+    color: #C9A84C;
+    letter-spacing: 2px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+  .company-en {
+    font-size: 9px;
+    color: #9e7a7a;
+    letter-spacing: 1.5px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 2px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+  }
+
+  /* Year watermark */
+  .year-badge {
+    position: absolute;
+    top: 28px; right: 16px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 52px;
+    font-weight: 700;
+    color: rgba(201,168,76,0.05);
+    letter-spacing: -2px;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  /* Tag pill */
+  .headline-tag {
+    display: inline-block;
+    background: #C9A84C;
+    color: #280d0d;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding: 4px 12px;
+    margin-bottom: 14px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+  }
+
+  /* Main title */
+  .headline-main {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: #F5EDDA;
+    line-height: 1.0;
+    letter-spacing: -1px;
+  }
+  .headline-main span { color: #C9A84C; }
+
+  .headline-sub {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 9px;
+    color: #9e7a7a;
+    letter-spacing: 1.5px;
+    margin-top: 10px;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  /* Market tags */
+  .market-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 14px;
+  }
+  .market-tag {
+    font-size: 10px;
+    color: #7a4a4a;
+    border: 1px solid rgba(122,74,74,0.4);
+    padding: 3px 9px;
+    letter-spacing: 0.5px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+  }
+
+  /* Salary note */
+  .salary-note {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(201,168,76,0.07);
+    border: 1px solid rgba(201,168,76,0.2);
+    padding: 7px 12px;
+    margin-top: 14px;
+  }
+  .salary-dot { width: 5px; height: 5px; background: #C9A84C; border-radius: 50%; flex-shrink: 0; }
+  .salary-text { font-size: 11px; color: #C9A84C; font-family: 'Be Vietnam Pro', sans-serif; }
+
+  /* ── DIVIDER ── */
+  .gold-line {
+    height: 1px;
+    background: linear-gradient(90deg, #C9A84C, transparent);
+    margin: 20px 22px;
+    position: relative;
+    z-index: 5;
+  }
+
+  /* ── INTRO ── */
+  .intro-section {
+    padding: 0 22px;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 5;
+  }
+
+  .intro-text {
+    font-size: 12.5px;
+    color: #bf9e9e;
+    line-height: 2.0;
+    font-weight: 300;
+    border-left: 2px solid rgba(201,168,76,0.3);
+    padding-left: 14px;
+    margin-bottom: 18px;
+  }
+
+  /* Stats row — horizontal on mobile */
+  .intro-stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .stat-item { text-align: center; flex: 1; }
+  .stat-num {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 20px;
+    color: #C9A84C;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .stat-label { font-size: 12px; color: #8a5a5a; letter-spacing: 0.5px; margin-top: 4px; }
+
+  /* ── SECTION TITLE ── */
+  .section-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 11px;
+    color: #C9A84C;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 22px;
+    position: relative;
+    z-index: 5;
+  }
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(201,168,76,0.4), transparent);
+  }
+
+  /* ── JOBS — single column on mobile ── */
+  .jobs-section {
+    padding: 0 22px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    z-index: 5;
+  }
+
+  .job-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(201,168,76,0.18);
+    padding: 18px 16px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .job-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .job-card.c1::before { background: linear-gradient(90deg, #C9A84C, #E8CC7A); }
+  .job-card.c2::before { background: linear-gradient(90deg, #4CA87A, #7AC8A4); }
+  .job-card.c3::before { background: linear-gradient(90deg, #4A7AC9, #7AA4E8); }
+
+  /* Card header row */
+  .card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0px;
+  }
+
+  .job-priority {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+  }
+  .c1 .job-priority { color: #C9A84C; }
+  .c2 .job-priority { color: #4CA87A; }
+  .c3 .job-priority { color: #5A88D4; }
+
+  .job-deadline-badge {
+    font-size: 12px;
+    color: #ccb6b6;
+    background: rgb(131 113 113 / 35%);
+    padding: 2px 7px;
+    border: 1px solid rgb(122 70 70);
+    white-space: nowrap;
+  }
+
+  .job-title-zh {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 20px;
+    color: #F5EDDA;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+  .job-title-vn {
+    font-size: 12px;
+    color: #9a6a6a;
+    font-style: italic;
+    margin-bottom: 12px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+  }
+
+  .job-divider {
+    height: 1px;
+    background: rgba(201,168,76,0.12);
+    margin-bottom: 12px;
+  }
+
+  .job-req {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 10px;
+  }
+  .job-req li {
+    font-size: 13px;
+    color: #9e7a7a;
+    padding-left: 12px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .job-req li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    font-size: 13px;
+    top: 0px;
+  }
+  .c1 .job-req li::before { color: #C9A84C; }
+  .c2 .job-req li::before { color: #4CA87A; }
+  .c3 .job-req li::before { color: #5A88D4; }
+
+  /* ── PROCESS — scrollable row ── */
+  .process-section {
+    padding: 0 22px;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 5;
+  }
+
+  .process-scroll {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    gap: 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .process-scroll::-webkit-scrollbar { display: none; }
+
+  .process-step { text-align: center; min-width: 72px; }
+  .step-circle {
+    width: 34px; height: 34px;
+    border: 1.5px solid rgba(201,168,76,0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 7px;
+    font-size: 11px;
+    color: #C9A84C;
+    font-weight: 700;
+  }
+  .step-name { font-size: 13px; color: #6a5a5a; letter-spacing: 0.3px; }
+  .step-arrow {
+    color: rgba(201,168,76);
+    font-size: 20px;
+    padding-bottom: 20px;
+    flex-shrink: 0;
+    padding: 0 2px 29px;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: rgba(0,0,0,0.35);
+    border-top: 1px solid rgba(201,168,76,0.18);
+    padding: 22px 22px;
+    position: relative;
+    z-index: 5;
+  }
+
+  .contact-label {
+    font-size: 9px;
+    color: #5a3a3a;
+    letter-spacing: 3px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .contact-email {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 20px;
+    color: #C9A84C;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .contact-note {
+    font-size: 10.5px;
+    color: #7a5a5a;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  /* Footer bottom row */
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .market-flags { display: flex; flex-direction: column; gap: 5px; }
+  .flag-item {
+    font-size: 10.5px;
+    color: #7a5a5a;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .flag-dot { width: 5px; height: 5px; background: #C9A84C; border-radius: 50%; flex-shrink: 0; }
+
+  .deadline-box {
+    text-align: center;
+    border: 1px solid rgba(201,168,76,0.2);
+    padding: 10px 14px;
+    flex-shrink: 0;
+  }
+  .dl-label { font-size: 8px; color: #5a3a3a; letter-spacing: 2px; margin-bottom: 5px; }
+  .dl-date {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 13px;
+    color: #F5EDDA;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <div class="hex-bg"></div>
+  <div class="deco-circle" style="width:280px;height:280px;top:-80px;right:-120px;"></div>
+  <div class="deco-circle" style="width:180px;height:180px;bottom:120px;left:-60px;"></div>
+
+  <!-- Top bar -->
+  <div class="top-bar"></div>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="year-badge">2026</div>
+
+    <div class="logo-row">
+      <svg class="turtle-icon" viewBox="0 0 52 52" fill="none">
+        <polygon points="26,4 46,15 46,37 26,48 6,37 6,15" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+        <circle cx="26" cy="26" r="11" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+        <circle cx="26" cy="26" r="4" fill="#C9A84C" opacity="0.6"/>
+        <line x1="26" y1="15" x2="26" y2="37" stroke="#C9A84C" stroke-width="0.75" opacity="0.4"/>
+        <line x1="16" y1="20.5" x2="36" y2="31.5" stroke="#C9A84C" stroke-width="0.75" opacity="0.4"/>
+        <line x1="36" y1="20.5" x2="16" y2="31.5" stroke="#C9A84C" stroke-width="0.75" opacity="0.4"/>
+      </svg>
+      <div>
+        <div class="company-zh">乌龟跨境电子商务有限公司</div>
+        <div class="company-en">Turtle Cross-Border E-Commerce Co., Ltd.</div>
+      </div>
+    </div>
+
+    <div class="headline-tag">WE ARE HIRING · 火热招聘中</div>
+    <div class="headline-main">
+      出海<span>东南亚</span><br>
+      与我们同行
+    </div>
+    <div class="headline-sub">CÙNG CHÚNG TÔI CHINH PHỤC THỊ TRƯỜNG ĐÔNG NAM Á</div>
+
+    <div class="market-tags">
+      <div class="market-tag">🇻🇳 VIETNAM</div>
+      <div class="market-tag">🇹🇭 THAILAND</div>
+      <div class="market-tag">TikTok Shop · Shopee · Lazada</div>
+    </div>
+
+    <div class="salary-note">
+      <div class="salary-dot"></div>
+      <div class="salary-text">薪资面议 · 绩效奖金 · 弹性远程 · 完善社保</div>
+    </div>
+  </div>
+
+  <div class="gold-line"></div>
+
+  <!-- Intro -->
+  <div class="intro-section">
+    <div class="intro-text">
+      我们是一家聚焦越南、泰国市场的新兴跨境电商团队，依托 TikTok Shop、Shopee、Lazada 平台快速成长。现面向全国招募有梦想、有执行力的伙伴，一起深耕东南亚蓝海，开启品牌出海新篇章。
+    </div>
+    <div class="intro-stats">
+      <div class="stat-item">
+        <div class="stat-num">3–4</div>
+        <div class="stat-label">招聘岗位</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">18–22%</div>
+        <div class="stat-label">行业年均增长率</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">2026</div>
+        <div class="stat-label">蓝海·无限可能</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Jobs -->
+  <div class="section-title">开放岗位 · VỊ TRÍ TUYỂN DỤNG</div>
+  <div class="jobs-section">
+
+    <!-- Job 1 -->
+    <div class="job-card c1">
+      <div class="card-head">
+        <div class="job-priority">★★★★★ 极高优先级</div>
+        <div class="job-deadline-badge">6月到岗 · 1–2人</div>
+      </div>
+      <div class="job-title-zh">越南语客服专员</div>
+      <div class="job-title-vn">Nhân viên CSKH Tiếng Việt</div>
+      <div class="job-divider"></div>
+      <ul class="job-req">
+        <li>越南语流利（母语级）</li>
+        <li>中文可熟练阅读</li>
+        <li>大专及以上学历</li>
+        <li>熟悉Shopee/TikTok</li>
+        <li>电商客服经验优先</li>
+        <li>月薪 5,000–7,000元 + 绩效奖金</li>
+      </ul>
+    </div>
+
+    <!-- Job 2 -->
+    <div class="job-card c2">
+      <div class="card-head">
+        <div class="job-priority">★★★★★ 极高优先级</div>
+        <div class="job-deadline-badge">6月到岗 · 1人</div>
+      </div>
+      <div class="job-title-zh">电商运营助理</div>
+      <div class="job-title-vn">Trợ lý vận hành thương mại điện tử</div>
+      <div class="job-divider"></div>
+      <ul class="job-req">
+        <li>熟悉平台选品上架</li>
+        <li>广告投放基础（CPC）</li>
+        <li>数据分析与报告</li>
+        <li>中文流利·英文加分</li>
+        <li>有实操经验优先</li>
+        <li>月薪 5,000–7,000元 + 绩效奖金</li>
+      </ul>
+    </div>
+
+    <!-- Job 3 -->
+    <div class="job-card c3">
+      <div class="card-head">
+        <div class="job-priority">★★★★☆ 高优先级</div>
+        <div class="job-deadline-badge">6月到岗 · 1人</div>
+      </div>
+      <div class="job-title-zh">财务 / 行政专员</div>
+      <div class="job-title-vn">Chuyên viên tài chính & hành chính</div>
+      <div class="job-divider"></div>
+      <ul class="job-req">
+        <li>会计/财务本科以上</li>
+        <li>跨境收款结汇经验</li>
+        <li>基础税务申报能力</li>
+        <li>熟练财务软件</li>
+        <li>初级会计证书优先</li>
+        <li>月薪 4,000–6,000元 + 绩效奖金</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Process -->
+  <div class="section-title">招聘流程 · QUY TRÌNH</div>
+  <div class="process-section">
+    <div class="process-scroll">
+      <div class="process-step">
+        <div class="step-circle">01</div>
+        <div class="step-name">简历投递</div>
+      </div>
+      <div class="step-arrow">›</div>
+      <div class="process-step">
+        <div class="step-circle">02</div>
+        <div class="step-name">技能测试</div>
+      </div>
+      <div class="step-arrow">›</div>
+      <div class="process-step">
+        <div class="step-circle">03</div>
+        <div class="step-name">结构化面试</div>
+      </div>
+      <div class="step-arrow">›</div>
+      <div class="process-step">
+        <div class="step-circle">04</div>
+        <div class="step-name">背景调查</div>
+      </div>
+      <div class="step-arrow">›</div>
+      <div class="process-step">
+        <div class="step-circle">05</div>
+        <div class="step-name">录用决策</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="contact-label">SEND YOUR RESUME · 简历投递</div>
+    <div class="contact-email">hr@turtle-ec.com</div>
+    <div class="contact-note">
+      邮件主题：【应聘岗位 + 姓名】<br>
+      Tiêu đề: [Vị trí] + [Họ tên]
+    </div>
+
+    <div class="footer-bottom">
+      <div class="market-flags">
+        <div class="flag-item"><div class="flag-dot"></div>🇻🇳 越南市场</div>
+        <div class="flag-item"><div class="flag-dot"></div>🇹🇭 泰国市场</div>
+        <div class="flag-item"><div class="flag-dot"></div>TikTok · Shopee · Lazada</div>
+      </div>
+      <div class="deadline-box">
+        <div class="dl-label">截止日期</div>
+        <div class="dl-date">2026年<br>6月30日</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
